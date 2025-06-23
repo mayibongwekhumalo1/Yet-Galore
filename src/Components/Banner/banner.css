@@ -1,0 +1,14 @@
+.banner{
+    background-image: url(/public/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    padding-top: 10vh;
+    background-attachment: fixed;
+}
+
+.banner box{
+    background-image: url(/public/Logo.svg);
+}
