@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import Navbar from "../Components/Navbar/Navbar";
-
 import { FiHeart, FiStar } from "react-icons/fi";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -229,11 +228,11 @@ const HimPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
               <img
-                src="/images/him-featured1.jpg"
+                src="/public/newdrops2.jpg"
                 alt="Summer Essentials"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center cursor-pointer hover:bg-transparent ">
                 <div className="text-center text-white p-4">
                   <h3 className="text-2xl font-bold mb-2">Summer Essentials</h3>
                   <button className="bg-white text-gray-900 px-6 py-2 rounded font-bold hover:bg-gray-100 transition">
@@ -244,11 +243,11 @@ const HimPage = () => {
             </div>
             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
               <img
-                src="/images/him-featured2.jpg"
+                src="/public/newdrops1.jpg"
                 alt="Formal Attire"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center cursor-pointer hover:bg-transparent ">
                 <div className="text-center text-white p-4">
                   <h3 className="text-2xl font-bold mb-2">Formal Attire</h3>
                   <button className="bg-white text-gray-900 px-6 py-2 rounded font-bold hover:bg-gray-100 transition">

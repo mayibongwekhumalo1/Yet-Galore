@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../Components/Navbar/Navbar";
+
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -60,19 +60,20 @@ const CartPage = () => {
     setCartItems(cartItems.filter((item) => item.id !== id));
   };
 
+
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
+    <div className="min-h-screen flex flex-col bg-blue-900 text-white ">
+   
 
       {/* Main Content */}
-      <main className="flex-grow py-12 px-4 md:px-8">
-        <div className="container mx-auto">
-          <h1 className="text-3xl font-bold mb-8">Your Shopping Cart</h1>
+      <main className="flex-grow py-12 px-4 md:px-8 text-blue-950">
+        <div className="container mx-auto mt-6">
+          <h1 className="text-3xl font-bold mb-8 text-white">Your Shopping Cart</h1>
 
           {cartItems.length === 0 ? (
             <div className="text-center py-12">
-              <h2 className="text-2xl font-bold mb-4">Your cart is empty</h2>
-              <p className="mb-6 text-gray-600">
+              <h2 className="text-2xl font-bold mb-4 text-white">Your cart is empty</h2>
+              <p className="mb-6 text-gray-100">
                 Looks like you haven't added anything to your cart yet
               </p>
               <Link
@@ -168,20 +169,8 @@ const CartPage = () => {
                   </ul>
                 </div>
 
-                {/* Coupon Code */}
-                <div className="mt-6 bg-white rounded-lg shadow-md p-6">
-                  <h3 className="font-bold mb-4">Apply Coupon Code</h3>
-                  <div className="flex">
-                    <input
-                      type="text"
-                      placeholder="Enter coupon code"
-                      className="flex-grow p-2 border rounded-l focus:outline-none focus:ring-2 focus:ring-gray-900"
-                    />
-                    <button className="bg-gray-900 text-white px-4 py-2 rounded-r hover:bg-gray-700 transition">
-                      Apply
-                    </button>
-                  </div>
-                </div>
+               
+             
               </div>
 
               {/* Order Summary */}

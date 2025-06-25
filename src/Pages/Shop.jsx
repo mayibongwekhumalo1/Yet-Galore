@@ -4,13 +4,13 @@ import { FiHeart, FiStar, FiFilter } from "react-icons/fi";
 import { BsArrowRight } from "react-icons/bs";
 
 const ShopPage = () => {
-  // Sample product data combining men's and women's items
+  
   const [allProducts, setAllProducts] = useState([
     {
       id: 1,
       name: "Classic Denim Jacket",
       price: 89.99,
-      image: "/images/him-jacket1.jpg",
+      image: "/public/banner.jpg",
       rating: 4.7,
       colors: ["blue", "black"],
       category: "outerwear",
@@ -22,7 +22,7 @@ const ShopPage = () => {
       id: 2,
       name: "Floral Summer Dress",
       price: 59.99,
-      image: "/images/her-dress1.jpg",
+      image: "/public/newdrops1.jpg",
       rating: 4.5,
       colors: ["pink", "blue", "white"],
       category: "dresses",
@@ -34,7 +34,7 @@ const ShopPage = () => {
       id: 3,
       name: "Premium Cotton Tee",
       price: 29.99,
-      image: "/images/him-tshirt1.jpg",
+      image: "/public/newdrops5.jpg",
       rating: 4.3,
       colors: ["white", "black", "gray"],
       category: "tops",
@@ -46,7 +46,7 @@ const ShopPage = () => {
       id: 4,
       name: "Elegant Blouse",
       price: 39.99,
-      image: "/images/her-blouse1.jpg",
+      image: "/public/newdrops6.jpg",
       rating: 4.3,
       colors: ["white", "beige", "red"],
       category: "tops",
@@ -56,9 +56,9 @@ const ShopPage = () => {
     },
     {
       id: 5,
-      name: "Slim Fit Chinos",
+      name: "Baggy Pants",
       price: 49.99,
-      image: "/images/him-pants1.jpg",
+      image: "/public/newdrops5.jpg",
       rating: 4.5,
       colors: ["khaki", "navy", "black"],
       category: "bottoms",
@@ -70,7 +70,7 @@ const ShopPage = () => {
       id: 6,
       name: "Summer Skirt",
       price: 34.99,
-      image: "/images/her-skirt1.jpg",
+      image: "/public/banner.jpg",
       rating: 4.6,
       colors: ["yellow", "blue", "green"],
       category: "bottoms",
@@ -82,7 +82,7 @@ const ShopPage = () => {
       id: 7,
       name: "Tailored Blazer",
       price: 129.99,
-      image: "/images/him-blazer1.jpg",
+      image: "/public/newdrops3.jpg",
       rating: 4.8,
       colors: ["navy", "charcoal"],
       category: "outerwear",
@@ -94,7 +94,7 @@ const ShopPage = () => {
       id: 8,
       name: "Casual Sneakers",
       price: 79.99,
-      image: "/images/him-shoes1.jpg",
+      image: "/public/newdrops2.jpg",
       rating: 4.6,
       colors: ["white", "black"],
       category: "footwear",
@@ -102,10 +102,9 @@ const ShopPage = () => {
       isNew: false,
       isFavorite: false,
     },
-  ]);
-
-  // Filter states
-  const [selectedGender, setSelectedGender] = useState("all");
+]);
+// Filter states
+const [selectedGender, setSelectedGender] = useState("all");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [priceRange, setPriceRange] = useState([0, 200]);
   const [sortOption, setSortOption] = useState("featured");
@@ -138,8 +137,9 @@ const ShopPage = () => {
     if (sortOption === "price-high") return b.price - a.price;
     if (sortOption === "rating") return b.rating - a.rating;
     if (sortOption === "newest") return (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0);
-    return 0; // featured keeps original order
+    return 0; 
   });
+
 
   // Available categories based on selected gender
   const availableCategories = ["all", ...new Set(

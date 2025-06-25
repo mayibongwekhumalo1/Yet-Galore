@@ -2,6 +2,9 @@ import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaPinterest } from "react-icons/fa";
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 
+
+
+
 function Footer() {
   return (
     <footer className="w-full bg-gradient-to-b from-gray-900 to-black text-white border-t border-gray-700">
@@ -149,7 +152,7 @@ function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center ">
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Yet Galore Fashion Store. All rights reserved.
           </div>
