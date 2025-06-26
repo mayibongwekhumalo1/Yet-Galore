@@ -42,7 +42,7 @@ const CartPage = () => {
     0
   );
   const shipping = subtotal > 100 ? 0 : 9.99;
-  const tax = subtotal * 0.1; // 10% tax
+  const tax = subtotal * 0.1; 
   const total = subtotal + shipping + tax;
 
   // Update quantity

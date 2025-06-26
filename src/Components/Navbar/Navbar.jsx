@@ -112,7 +112,7 @@ function Navbar() {
             <img
               src="/Logo.svg"
               alt=""
-              className="w-fit h-fit rounded-full hover:shadow-blue-200 shadow-2xl"
+              className="w-fit h-fit rounded-full hover:shadow-blue-200 shadow-2xl text-white hover:shadow-lg transition-all duration-300 cursor-pointer "
             />
           </Link>
         </div>
@@ -125,7 +125,7 @@ function Navbar() {
                 {link.dropdown ? (
                   <>
                     <button 
-                      className="text-white font-bold hover:text-blue-400 capitalize"
+                      className="text-white  hover:text-blue-400 capitalize font-extrabold cursor-pointer "
                       onClick={() => toggleDropdown(link.id)}
                     >
                       {link.name}

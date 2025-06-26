@@ -3,14 +3,42 @@ import Banner from '../Components/Banner/Banner'
 import NewDrops from '../Components/NewDrops/NewDrops'
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
-
+import ImageSlider from '../Components/Slides/ImageSlider';
 
 
 function Home() {
 
-// 
 
-
+     const slides = [
+    {
+      url: 'https://res.cloudinary.com/dxrv8lauy/image/upload/v1750774002/IMG_0570_hrnuho.jpg',
+      title: 'Slide 1',
+      description: 'This is the first slide'
+    },
+    {
+      url: 'https://res.cloudinary.com/dxrv8lauy/image/upload/v1750773949/IMG_0643_yvzumz.jpg',
+      title: 'Slide 2',
+      description: 'This is the second slide'
+    },
+    {
+      url: 'https://res.cloudinary.com/dxrv8lauy/image/upload/v1750773950/IMG_0642_gv57lz.jpg',
+      title: 'Slide 3',
+      description: 'This is the third slide'
+    },
+    {
+      url: 'https://res.cloudinary.com/dxrv8lauy/image/upload/v1750773957/IMG_0540_bzjghd.jpg',
+      title: 'Slide 4',
+      description: 'This is the fourth slide'
+    }
+    ]    
+    
+    const containerStyles = {
+      width: "100%",
+      height: "100%",
+      margin : "0 auto",
+    
+    
+    }
 
   return (
     <main>
@@ -18,45 +46,60 @@ function Home() {
   
    
    <Banner/>
-   <NewDrops/>
+   {/* <NewDrops/> */}
+
+     <section className='container mx-auto px-4 py-8 space-y-6 min-h-90'> 
+
+      <div className="container grid grid-cols-1 md:grid-cols-2  gap-6">
+
+        <div className=" group text-content  h-90 flex flex-col justify-center items-center text-white p-6 bg-gradient-to-br from-blue-950 to-black shadow-lg ">
+
+          <div className='   flex flex-col items-center justify-center text-center space-y-4'>
+            <h2 className="text-lg">
+            <Link to="/new-collection" className=" group-[ hover:text-blue-700]: flex items-center">
+              New Collection  <FaArrowRight className="inline ml-1" />
+            </Link>
+           
+
+          </h2>
+            <p className="text-white">Discover our latest collection of unique designs and styles.</p>
+            <Link to="/shop" className="bg-blue-950 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+              Shop Now
+            </Link>
+           <span className="ml-2 text-white">Explore the latest arrivals</span>
+           
+          </div>
+
+          
+        </div>
+
+
+        <div className="text-content border-4 border-blue-950 h-90">
+          {/* Image Slider Component */}  
+          <div style={containerStyles}>
+
+          <ImageSlider slides={slides} />
+
+          </div>
+           
+
+        </div>
+
+      </div>
+
+
+     </section>
+
+
    
 
       {/* new collection */}
 
-      {/* <section className="new-collection bg-gray-100 p-0 mb-3.5 md:p-16 ">
+      
 
-        <div className="container min-h-100 grid grid-cols-1 space-y-2.5 px-3 text-sm md:grid-cols-2 md:text-lg   border-2  border-amber-300 ">
-          <div className="image-container space-y-2.5">
-            <div className="new-collection-image w-full h-56 md:h-96 overflow-hidden rounded-lg shadow-lg">
-            <img src="https://collection.cloudinary.com/dxrv8lauy/43033b4a1afec454c197a292e9b820c3" alt="New Collection" />
+          
 
-              </div>
 
-              <p>
-              Explore our new collection of fashion-forward pieces that redefine style and comfort. From chic dresses to trendy accessories, find your perfect look for any occasion. </p>
-              
-           
-
-          </div>
-
-           <div className="new-collection-text mt-2 space-y-2.5">
-
-             <div className="collection-text space-y-2.5">
-               <h2>New Collection</h2>
-              <p>Discover the latest trends and styles in our new collection. Shop now and elevate your wardrobe with our exclusive pieces.</p>
-              <Link to="/shop" className="btn p-1.5 rounded-xl bg-blue-950 text-white flex align-middle w-30 md:w-50 justify-center gap-2">Shop Now <FaArrowRight className=' flex mt-1' /> </Link>
-
-             </div>
-
-             <div className="text-image w-full h-56 md:h-96 overflow-hidden rounded-lg shadow-lg">
-              <img src="https://collection.cloudinary.com/dxrv8lauy/43033b4a1afec454c197a292e9b820c3" alt="New Collection" />
-             </div>
-
-              </div>
-
-          </div>
-      </section> */}
-    
     </main>
 
   )

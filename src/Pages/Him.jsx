@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Navbar from "../Components/Navbar/Navbar";
 import { FiHeart, FiStar } from "react-icons/fi";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -11,7 +10,7 @@ const HimPage = () => {
       id: 1,
       name: "Classic Denim Jacket",
       price: 89.99,
-      image: "/images/him-jacket1.jpg",
+      image: "https://res.cloudinary.com/dxrv8lauy/image/upload/v1750773943/IMG_0107_rnm8ob.jpg",
       rating: 4.7,
       colors: ["blue", "black"],
       sizes: ["S", "M", "L", "XL"],
@@ -22,7 +21,7 @@ const HimPage = () => {
       id: 2,
       name: "Slim Fit Chinos",
       price: 49.99,
-      image: "/images/him-pants1.jpg",
+      image: "https://res.cloudinary.com/dxrv8lauy/image/upload/v1750773951/IMG_4196_p8x4fy.jpg",
       rating: 4.5,
       colors: ["khaki", "navy", "black"],
       sizes: ["30", "32", "34", "36"],
@@ -33,7 +32,7 @@ const HimPage = () => {
       id: 3,
       name: "Premium Cotton Tee",
       price: 29.99,
-      image: "/images/him-tshirt1.jpg",
+      image: "https://res.cloudinary.com/dxrv8lauy/image/upload/v1750773961/IMG_0539_qryv7v.jpg",
       rating: 4.3,
       colors: ["white", "black", "gray"],
       sizes: ["S", "M", "L", "XL"],
@@ -44,7 +43,7 @@ const HimPage = () => {
       id: 4,
       name: "Tailored Blazer",
       price: 129.99,
-      image: "/images/him-blazer1.jpg",
+      image: "https://res.cloudinary.com/dxrv8lauy/image/upload/v1750773974/IMG_0546_df6ivq.jpg",
       rating: 4.8,
       colors: ["navy", "charcoal"],
       sizes: ["38", "40", "42", "44"],
@@ -55,7 +54,7 @@ const HimPage = () => {
       id: 5,
       name: "Casual Sneakers",
       price: 79.99,
-      image: "/images/him-shoes1.jpg",
+      image: "https://res.cloudinary.com/dxrv8lauy/image/upload/v1750773992/IMG_0562_igz3yy.jpg",
       rating: 4.6,
       colors: ["white", "black"],
       sizes: ["8", "9", "10", "11"],
@@ -66,7 +65,7 @@ const HimPage = () => {
       id: 6,
       name: "Athletic Shorts",
       price: 34.99,
-      image: "/images/him-shorts1.jpg",
+      image: "https://res.cloudinary.com/dxrv8lauy/image/upload/v1750945947/pic1_1_t9ln6o.jpg",
       rating: 4.2,
       colors: ["black", "blue", "gray"],
       sizes: ["S", "M", "L", "XL"],
@@ -74,6 +73,15 @@ const HimPage = () => {
       isFavorite: false,
     },
   ]);
+
+  // const goToShop = ()=>{
+
+  //   return(
+  //     <div>
+
+  //     </div>
+  //   )
+  // }
 
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortOption, setSortOption] = useState("featured");
@@ -100,7 +108,7 @@ const HimPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+     
       
       {/* Hero Section */}
       <section className="relative h-96 bg-gradient-to-r from-blue-400 to-blue-950 flex items-center justify-center">
@@ -221,6 +229,8 @@ const HimPage = () => {
         </div>
       </section>
 
+      
+
       {/* Featured Collection */}
       <section className="bg-gray-100 py-16 px-4 md:px-8">
         <div className="container mx-auto">
@@ -228,7 +238,7 @@ const HimPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
               <img
-                src="/public/newdrops2.jpg"
+                src="https://res.cloudinary.com/dxrv8lauy/image/upload/v1750773961/IMG_4200_xbuqfv.jpg"
                 alt="Summer Essentials"
                 className="w-full h-full object-cover"
               />
@@ -243,14 +253,19 @@ const HimPage = () => {
             </div>
             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
               <img
-                src="/public/newdrops1.jpg"
+                src="https://res.cloudinary.com/dxrv8lauy/image/upload/v1750773951/IMG_4196_p8x4fy.jpg"
                 alt="Formal Attire"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center cursor-pointer hover:bg-transparent ">
                 <div className="text-center text-white p-4">
                   <h3 className="text-2xl font-bold mb-2">Formal Attire</h3>
-                  <button className="bg-white text-gray-900 px-6 py-2 rounded font-bold hover:bg-gray-100 transition">
+                  <button className="bg-white text-gray-900 px-6 py-2 rounded font-bold hover:bg-gray-100 transition" 
+                  
+                  to ="/shop"
+                  
+                  
+                  >
                     Shop Now
                   </button>
                 </div>
