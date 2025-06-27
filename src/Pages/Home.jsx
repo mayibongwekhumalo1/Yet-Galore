@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Banner from '../Components/Banner/Banner'
-import NewDrops from '../Components/NewDrops/NewDrops'
+// import NewDrops from '../Components/NewDrops/NewDrops'
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
 import ImageSlider from '../Components/Slides/ImageSlider';
@@ -39,6 +39,24 @@ function Home() {
     
     
     }
+
+
+
+
+      const [name, setname] = useState("");
+      const [payment,setPayment]= useState("")
+
+
+    const handleNameChange =(event)=>{
+      setname(event.target.value);
+    };
+
+  const handlePaymentChange =(event)=>{
+
+    setPayment(event.target.value);
+
+  };
+
 
   return (
     <main>
@@ -92,13 +110,21 @@ function Home() {
 
 
    
-
-      {/* new collection */}
-
+    <input type="text" value={name} onChange={handleNameChange} className='border-4 border-amber-300 mb-7' />
+   
+    <p>This is my {name}</p>
       
 
-          
+          <select name="" id="" value={payment} onChange={handlePaymentChange} >
 
+          <option value="">Choose payment method</option>
+           <option value='visa'>Visa</option>
+           <option value='master card'>master card</option>
+            <option value='servings card'>Servings card</option>
+
+          </select>
+
+        <p className='mb-7 '>This is my payment method:{payment}</p>
 
     </main>
 
