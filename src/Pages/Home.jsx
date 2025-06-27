@@ -110,22 +110,7 @@ function Home() {
 
 
    
-    <input type="text" value={name} onChange={handleNameChange} className='border-4 border-amber-300 mb-7' />
-   
-    <p>This is my {name}</p>
-      
-
-          <select name="" id="" value={payment} onChange={handlePaymentChange} >
-
-          <option value="">Choose payment method</option>
-           <option value='visa'>Visa</option>
-           <option value='master card'>master card</option>
-            <option value='servings card'>Servings card</option>
-
-          </select>
-
-        <p className='mb-7 '>This is my payment method:{payment}</p>
-
+    
     </main>
 
   )
