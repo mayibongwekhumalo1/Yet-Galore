@@ -5,7 +5,6 @@ import Home from './Pages/Home';
 import Her from './Pages/Her';
 import Him from './Pages/Him';
 import NewCollection from './Pages/NewCollection';
-// import Collections from './Pages/Collections';
 import Shop from './Pages/Shop';
 import Login from './Pages/Login';
 import Cart from './Pages/Cart';  

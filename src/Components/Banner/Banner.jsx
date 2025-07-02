@@ -28,7 +28,7 @@ const handleClick = () => {
       < div className="banner-overlay absolute inset-0 bg-black opacity-50 flex justify-between align-middle z-10">
 
         <div className="banner-content flex flex-col space-y-1.5 z-10 text-center w-full h-full  items-start justify-center px-10 ">
-            <h1 className='text-lg md:text-5xl font-bold text-white'>Welcome to our Yet Galore</h1>
+            <h1 className='text-lg md:text-5xl font-bold text-white'>Welcome to  Yet Galore</h1>
             <p className='text-sm md:text-lg text-gray-300 mt-4'>Discover the latest trends and exclusive offers</p>
           
      <button className=" btn cursor-pointer w-40 md:w-60 px-6 py-1.5 md:py-3  bg-blue-950  font-bold text-white  transition-all duration-500 hover:bg-gradient-to-r hover:from-gray-950 hover:to-blue-9500 hover:shadow-2xl shadow-blue-500  z-10 rounded-2xl hover:scale-105"

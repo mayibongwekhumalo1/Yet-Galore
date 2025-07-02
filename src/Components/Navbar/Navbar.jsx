@@ -6,6 +6,18 @@ import { CiMenuFries } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
+
+
+
+
+
+
+
+
+
+
+
+
 function Navbar() {
   const NavbarLinks = [
     {
